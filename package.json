@@ -1,6 +1,6 @@
 {
   "name": "git-yapyap-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Git YapYap — AI-powered GitHub activity summarizer. See what you shipped today.",
   "type": "module",
   "files": [
