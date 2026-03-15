@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "Git YapYap — AI-powered GitHub activity summarizer. See what you shipped today.",
   "type": "module",
+  "files": [
+    "bin",
+    "src"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "bin": {
-    "yap": "./bin/yap.js"
+    "yap": "bin/yap.js"
   },
   "scripts": {
     "start": "node bin/yap.js"
