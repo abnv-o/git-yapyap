@@ -1,68 +1,44 @@
-# 🗣️ Git YapYap
+# Git YapYap CLI
 
-> AI-powered GitHub activity summarizer — see what you shipped, instantly.
+A command-line tool that fetches your GitHub commits for a specific date and uses AI to generate a summary of your activity.
 
-Git YapYap fetches your GitHub commits for any date, groups them by repository, and generates incredibly concise AI-powered summaries of your daily work. Perfect for standups, daily logs, tracking what you actually accomplished, or just reflecting on your productivity.
+## Installation
 
-## ✨ Features
+Install the package globally via npm:
 
----
+```bash
+npm install -g git-yapyap-cli
+```
 
-## 🚀 Installation & Distribution
+## Setup
 
-Git YapYap is designed to be installed globally on your machine using Node.js.
+Before using the tool, you must configure it with a GitHub Personal Access Token and an API key for your preferred AI provider (OpenAI, Anthropic, Gemini, etc).
 
-### Install direct from source (Local)
-1. Clone this repository or download the source code wrapper.
-2. Inside the project directory, install the dependencies and link it globally:
-   ```bash
-   npm install -g .
-   ```
-
-
----
-
-## ⚙️ How to Setup (One-Time)
-
-Once you install `git-yap`, you only need to run the setup wizard **once**.
+Run the setup command:
 
 ```bash
 yap setup
 ```
 
-You will need two things to complete setup:
-### 1. GitHub Personal Access Token (PAT)
-Git YapYap needs a GitHub token to securely fetch your commits.
-1. Go to your [GitHub Personal Access Tokens settings area](https://github.com/settings/tokens).
-2. Click **Generate new token (classic)**.
-3. In the Scopes section, **check the `repo` box**. *(This is required if you want it to summarize private repositories!)*
-4. Keep the token safe and paste it into the CLI wizard when asked.
+You will need:
+1. **GitHub PAT**: Generate a classic token at `https://github.com/settings/tokens`. If you want to summarize private repositories, check the `repo` scope.
+2. **AI API Key**: Obtain an API key from your chosen supported provider.
 
-### 2. AI Platform Setup (API Key)
-Pick your favorite LLM provider and grab an API key:
+## Usage
 
----
-
-## 📖 Usage
-
-Using Git YapYap is as simple as it gets. You don't need to specify formats, just tell it when to yap.
+Run the tool in your terminal to fetch and summarize commits.
 
 ```bash
-# Today's activity
+# Summarize today's commits
 yap yap
 
-# Yesterday's activity
+# Summarize yesterday's commits
 yap yesterday
 
-# A specific date (DDMMYYYY, DD-MM-YYYY, or DD/MM/YYYY)
+# Summarize a specific date (Format: DDMMYYYY, DD-MM-YYYY, or DD/MM/YYYY)
 yap 16032026
-yap 16-03-2026
-yap 16/03/2026
 ```
 
+## License
 
----
-
-## 🏗️ Version 1.0.0
-
-**License**: MIT
+MIT
